@@ -1,0 +1,122 @@
+ul.list-icon1 {
+  list-style: none;
+  text-align: left;
+  line-height: 2.3;
+  margin-right: 26px;
+  padding: 15px;
+  border-right: 1px solid;
+  display: inline-block;
+}
+ul.list-icon1 li {
+  font-family: "Poppins";
+}
+.vb1 {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.vb12 {
+  display: flex !important;
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (max-width: 990px) {
+  ul.list-icon1 {
+    border-right: none;
+  }
+  .slider-type1 img {
+    width: 295px !important;
+    height: 247px !important;
+    margin-right: -125px;
+  }
+  .slider-type {
+    padding-right: 93px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .slider-type1 img {
+    width: 233px !important;
+    height: 210px !important;
+    margin-right: -80px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .slider-type1 img {
+    width: 217px !important;
+    height: 197px !important;
+    margin-right: -76px;
+    margin-left: 22px !important;
+  }
+  .slider-type {
+    padding-right: 0px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .slider-type1 img {
+    width: 184px !important;
+    height: 176px !important;
+
+    margin-left: 0px !important;
+  }
+}
+
+.right-slider {
+  background: black;
+  width: 100%;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-slide img {
+  width: 50px;
+  height: 46px;
+}
+.col-lg-9.bn {
+  padding-top: 20px;
+}
+.slider-type1 img {
+  width: 375px;
+  height: 285px;
+  margin-left: -30px;
+  margin-top: 11px;
+}
+
+.sub-slide {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.sub-slide span {
+  color: white;
+}
+.sub-two h1 {
+  color: white;
+}
+.sub-three {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 21px;
+  padding-top: 25px;
+  color: white;
+}
+.sub-three span {
+  border-bottom: 1px solid;
+}
+.slider-type {
+  margin-left: -70px;
+  margin-bottom: 20px;
+}
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  margin-top: -22px;
+}
+svg.fg {
+  color: rebeccapurple;
+}

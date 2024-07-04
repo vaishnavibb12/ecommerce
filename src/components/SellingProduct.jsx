@@ -5,6 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 import speker from "../assets/speaker.png";
+import sellingp from "../SellingProduct";
 
 function SellingProduct() {
   return (
@@ -34,35 +35,39 @@ function SellingProduct() {
           {/* Selling product */}
 
           <div className="row">
-            <div className="col-lg-3">
-              <div className="flash-section">
-                <img src={jacket} alt="" />
+            {sellingp.map((item) => {
+              return (
+                <div className="col-lg-3">
+                  <div className="flash-section">
+                    <img src={jacket} alt="" />
 
-                <div className="sub1-flash">
-                  <CiHeart className="bg" />
-                  <IoEyeOutline className="bg1" />
-                </div>
-              </div>
-              <div className="flash-head">
-                <p>The North Coat</p>
-                <div className="head1">
-                  <span>$120</span>
-                  <span className="cut">$160</span>
-                </div>
-                <div className="head2">
-                  <div className="sd">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
+                    <div className="sub1-flash">
+                      <CiHeart className="bg" />
+                      <IoEyeOutline className="bg1" />
+                    </div>
                   </div>
-                  <div className="df">
-                    <span>(65)</span>
+                  <div className="flash-head">
+                    <p>{item.title}</p>
+                    <div className="head1">
+                      <span>${item.price}</span>
+                      <span className="cut">{item.cutprice}</span>
+                    </div>
+                    <div className="head2">
+                      <div className="sd">
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                      </div>
+                      <div className="df">
+                        <span>({item.bracketvalue})</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>

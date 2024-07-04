@@ -3,6 +3,7 @@ import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import "../css/categories.css";
 import { IoIosPhonePortrait } from "react-icons/io";
+import category from "../Category";
 function Categories() {
   return (
     <div className="section">
@@ -19,6 +20,7 @@ function Categories() {
               <h1>Browse By Category</h1>
             </div>
             <div className="col-lg-3"></div>
+
             <div className="col-lg-3">
               <div className="arrow">
                 <FaRegArrowAltCircleLeft />
@@ -28,14 +30,18 @@ function Categories() {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-2">
-            <div className="category">
-              <div className="sub-cat">
-                <IoIosPhonePortrait />
-                <span className="sec">Phones</span>
+          {category.map(() => {
+            return (
+              <div className="col-lg-2">
+                <div className="category">
+                  <div className="sub-cat">
+                    {<IoIosPhonePortrait />}
+                    <span className="sec">Phones</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>

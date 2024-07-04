@@ -58,7 +58,7 @@ function Navbar() {
       {/* mobile view */}
 
       <div className="moblileview">
-        <div className="nav-img">
+        <div className="nav-img rt">
           <h1>Exclusive</h1>
         </div>
 

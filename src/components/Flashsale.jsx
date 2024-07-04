@@ -6,7 +6,7 @@ import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
 import flash from "../assets/flash1.png";
 import { FaStar } from "react-icons/fa";
-
+import array from "../ArrayStored";
 function Flashsale() {
   return (
     <div className="section">
@@ -62,37 +62,50 @@ function Flashsale() {
 
         {/* flashbox */}
         <div className="row">
-          <div className="col-lg-3">
-            <div className="flash-section">
-              <img src={flash} alt="" />
-              <div className="sub-flash">
-                <span>-40%</span>
-              </div>
-              <div className="sub1-flash">
-                <CiHeart className="bg" />
-                <IoEyeOutline className="bg1" />
-              </div>
-            </div>
-            <div className="cart">
-              <span>Add to Cart</span>
-            </div>
-            <div className="flash-head">
-              <div className="head1">
-                <span>$120</span>
-                <span className="cut">$160</span>
-              </div>
-              <div className="head2">
-                <div className="sd">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
+          {array.map((item) => {
+            return (
+              <div className="col-lg-3">
+                <div className="flash-section">
+                  <img src={item.img} alt="" />
+                  <div className="sub-flash">
+                    <span>-{item.percentage}%</span>
+                  </div>
+                  <div className="sub1-flash">
+                    <CiHeart className="bg" />
+                    <IoEyeOutline className="bg1" />
+                  </div>
                 </div>
-                <div className="df">
-                  <span>(88)</span>
+                <div className="cart">
+                  <span className="ghdf">{item.cart}</span>
+                </div>
+                <div className="flash-head">
+                  <div className="head1">
+                    <span>${item.price}</span>
+                    <span className="cut">$160</span>
+                  </div>
+                  <div className="head2">
+                    <div className="sd">
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </div>
+                    <div className="df">
+                      <span>({item.bracketvalue})</span>
+                    </div>
+                  </div>
                 </div>
               </div>
+            );
+          })}
+        </div>
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="but1">
+              <button type="button" class="btn btn-dark">
+                View Product
+              </button>
             </div>
           </div>
         </div>

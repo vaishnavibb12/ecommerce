@@ -84,6 +84,10 @@ span.vb {
     border-bottom: 1px solid;
     text-align: center;
   }
+
+  .nav-img.rt {
+    display: flex;
+  }
   .nav-img {
     display: none;
     /* margin: 0px; */

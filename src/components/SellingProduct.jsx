@@ -4,7 +4,7 @@ import jacket from "../assets/jacket.png";
 import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
-import speker from "../assets/speaker.png";
+
 import sellingp from "../SellingProduct";
 
 function SellingProduct() {
@@ -68,52 +68,6 @@ function SellingProduct() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </div>
-      {/* full width Categories */}
-      <div className="section">
-        <div className="container">
-          <div className="row">
-            <div className="main-cat">
-              <div className="col-lg-6">
-                <div className="right-cat">
-                  <img src={speker} alt="" />
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="left-cat">
-                  <div className="left1">
-                    <span className="fg"> Categories</span>
-                    <h1>
-                      Enhance Your <br /> Music Experience
-                    </h1>
-                    <div className="time">
-                      <div className="ths">
-                        <h2>23</h2>
-                        <span className="hjs">HOURS</span>
-                      </div>
-                      <div className="ths">
-                        <h2>05</h2>
-                        <span className="hjs">DAYS</span>
-                      </div>
-                      <div className="ths">
-                        <h2>59</h2>
-                        <span className="hjs">MINUTES</span>
-                      </div>
-                      <div className="ths">
-                        <h2>35</h2>
-                        <span className="hjs">SECONDS</span>
-                      </div>
-                    </div>
-
-                    <div className="button1">
-                      <button>Buy Now</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -72,15 +72,45 @@ function Feature() {
         </div>
 
         {/* call us */}
-        <div className="row">
-          <div className="col-lg-4">
-            <div className="call">
-              <div className="av">
-                <GrDeliver />
+        <div className="ghghg">
+          <div className="row">
+            <div className="col-lg-4">
+              <div className="call">
+                <div className="av-container">
+                  <div className="av">
+                    <GrDeliver />
+                  </div>
+                </div>
+                <div className="av1">
+                  <p>FREE AND FAST DELIVERY</p>
+                  <span>Free delivery for all orders over $140</span>
+                </div>
               </div>
-              <div className="av1">
-                <p>FREE AND FAST DELIVERY</p>
-                <span>Free delivery for all orders over $140</span>
+            </div>
+            <div className="col-lg-4">
+              <div className="call">
+                <div className="av-container">
+                  <div className="av">
+                    <GrDeliver />
+                  </div>
+                </div>
+                <div className="av1">
+                  <p>FREE AND FAST DELIVERY</p>
+                  <span>Free delivery for all orders over $140</span>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="call">
+                <div className="av-container">
+                  <div className="av">
+                    <GrDeliver />
+                  </div>
+                </div>
+                <div className="av1">
+                  <p>FREE AND FAST DELIVERY</p>
+                  <span>Free delivery for all orders over $140</span>
+                </div>
               </div>
             </div>
           </div>

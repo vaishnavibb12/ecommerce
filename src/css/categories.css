@@ -2,6 +2,7 @@
   border: 1px solid #00000040;
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-bottom: 10px;
 }
 .arrow svg {
   width: 60px;
@@ -30,4 +31,16 @@ h1 {
 }
 span.sec {
   padding-top: 15px;
+}
+
+.bnm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px 20px 0px;
+}
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 26px;
+  }
 }

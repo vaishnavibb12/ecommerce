@@ -19,12 +19,14 @@ function SellingProduct() {
               </div>
               <span>This Month</span>
             </div>
-            <div className="col-lg-12 fgh">
-              <div className="col-lg-6 ghd">
+          </div>
+          <div className="row">
+            <div className="honda">
+              <div className="col-lg-6">
                 <h1>Best Selling Products</h1>
               </div>
-              <div className="col-lg-3"></div>
-              <div className="col-lg-3">
+
+              <div className="col-lg-6">
                 <div className="arrow">
                   <button>View All</button>
                 </div>
@@ -37,7 +39,7 @@ function SellingProduct() {
           <div className="row">
             {sellingp.map((item) => {
               return (
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-md-6 col-sm-6">
                   <div className="flash-section">
                     <img src={jacket} alt="" />
 

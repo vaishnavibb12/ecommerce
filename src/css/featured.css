@@ -14,7 +14,7 @@
 .feature img {
   background: black;
   width: 100%;
-  height: 555px;
+  height: 100%;
 }
 .feature {
   position: relative;
@@ -31,9 +31,8 @@ span.sp-bu {
 }
 .feature1 img {
   width: 100%;
-  height: 310px;
-  transform: translate(0px, 10px);
-  margin-top: -10px;
+  height: 100%;
+  /* transform: translate(0px, 11px); */
 }
 .feature1 {
   position: relative;
@@ -53,10 +52,11 @@ span.sp-bu {
 }
 .feature2 {
   background: black;
-  height: 232px;
+  height: 100%;
   margin-top: 20px;
-  width: 270px;
+  width: 100%;
   position: relative;
+  margin-left: -1px;
 }
 .text-fea2 {
   position: absolute;
@@ -73,9 +73,9 @@ span.sp-bu {
 }
 .feature3 {
   background: black;
-  height: 232px;
+  height: 100%;
   margin-top: 20px;
-  width: 270px;
+  width: 100%;
   position: relative;
 }
 .text-fea3 {
@@ -134,4 +134,39 @@ span.sp-bu {
   justify-content: center;
   border-radius: 50%;
   background-color: #ddd;
+}
+@media screen and (max-width: 768px) {
+  .feature {
+    margin-bottom: 10px;
+  }
+  .text-fea2 h5 {
+    font-size: 14px;
+  }
+  .text-fea3 h5 {
+    font-size: 14px;
+  }
+  .text-fea2 {
+    font-size: 10px;
+  }
+  .text-fea3 {
+    font-size: 10px;
+  }
+  .text-fea1 {
+    font-size: 12px;
+  }
+  .text-fea {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .text-fea2 {
+    font-size: 10px;
+  }
+  .text-fea3 {
+    font-size: 10px;
+  }
+  .text-fea1 {
+    font-size: 12px;
+  }
 }

@@ -69,13 +69,21 @@
   .image-section {
     flex: none;
     width: 100%;
+    text-align: center;
   }
 
   .text-section h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .text-section p {
     text-align: center;
   }
 
   .countdown {
     justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }

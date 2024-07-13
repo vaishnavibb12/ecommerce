@@ -18,11 +18,13 @@ function Flashsale() {
             </div>
             <span>Today's</span>
           </div>
-          <div className="col-lg-12 fgh">
-            <div className="col-lg-3">
-              <h1>Flash Sales</h1>
+        </div>
+        <div className="row">
+          <div className="figure-out">
+            <div className="col-lg-4">
+              <h1 className="h-one">Flash Sales</h1>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-4">
               <div className="times">
                 <ul className="list-icons">
                   <li>DAYS</li>
@@ -51,7 +53,7 @@ function Flashsale() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-4">
               <div className="arrow">
                 <FaRegArrowAltCircleLeft />
                 <FaRegArrowAltCircleRight />
@@ -64,7 +66,7 @@ function Flashsale() {
         <div className="row">
           {array.map((item) => {
             return (
-              <div className="col-lg-3">
+              <div className="col-lg-3 col-md-6 col-sm-6">
                 <div className="flash-section">
                   <img src={item.img} alt="" />
                   <div className="sub-flash">

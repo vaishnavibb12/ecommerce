@@ -4,14 +4,14 @@ import "../css/slider.css";
 import { TbMathGreater } from "react-icons/tb";
 import apple from "../assets/apple.png";
 import { FaArrowRight } from "react-icons/fa";
-import applephone from "../assets/apple-phone.png";
+import applephone from "../assets/apple-phone-removebg-preview.png";
 import { GoDotFill } from "react-icons/go";
 function Slider() {
   return (
     <div className="section">
       <div className="container">
         <div className="row">
-          <div className="col-lg-3">
+          <div className="col-sm-3 col-md-4 col-lg-3">
             <ul className="list-icon1">
               <div className="vb12">
                 <li className="li">Woman’s Fashion </li> <TbMathGreater />
@@ -31,9 +31,9 @@ function Slider() {
               <li>Health & Beauty</li>
             </ul>
           </div>
-          <div className="col-lg-9 bn">
+          <div className="col-sm-9 col-md-8 col-lg-9 bn">
             <div className="right-slider">
-              <div className="col-lg-4">
+              <div className="col-sm-6 col-md-6 col-lg-6">
                 <div className="slider-type">
                   <div className="sub-slide">
                     <img src={apple} alt="" />
@@ -51,7 +51,7 @@ function Slider() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4">
+              <div className="col-sm-6 col-md-6 col-lg-6">
                 <div className="slider-type1">
                   <img src={applephone} alt="" />
                 </div>

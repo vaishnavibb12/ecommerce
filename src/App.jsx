@@ -19,7 +19,7 @@ function App() {
       <Demos />
       <Feature />
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

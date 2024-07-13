@@ -72,6 +72,8 @@ span.vb {
     background: black;
     color: white;
     padding: 20px;
+    transition: all ease-in 0.5s;
+    /* position: relative; */
   }
   .mobile-links ul {
     display: flex;
@@ -89,7 +91,7 @@ span.vb {
     display: flex;
   }
   .nav-img {
-    display: none;
+    /* display: none; */
     /* margin: 0px; */
   }
   .sub-but1 {
@@ -119,18 +121,22 @@ span.vb {
   .nav-icons {
     display: none;
   }
+  .nav-bar {
+    justify-content: space-between;
+    margin-left: 10px;
+  }
 }
 
 .toogle {
-  position: fixed;
+  position: absolute;
   background: white;
   padding: 5px;
-  display: none;
-  top: 10px;
-  right: 5px;
+  /* display: none; */
+  top: 0;
+  right: 20px;
   width: 30px;
-  align-items: center;
-  justify-content: space-around;
+  /* align-items: center;
+  justify-content: space-around; */
 }
 
 @media screen and (max-width: 600px) {
@@ -138,7 +144,20 @@ span.vb {
     flex-direction: column;
     font-size: 15px;
   }
+  .sub-but1 span {
+    font-size: 11px;
+  }
 }
 .moblileview {
+  /* position: relative;
+
+  left: -100%;
+  transition: all ease-in 0.5s; */
+  display: none;
+}
+.Disableview {
+  /* position: relative;
+  left: 0;
+  transition: all ease-in 0.5s; */
   display: none;
 }

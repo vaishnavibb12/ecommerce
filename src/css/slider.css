@@ -7,6 +7,9 @@ ul.list-icon1 {
   border-right: 1px solid;
   display: inline-block;
 }
+.container {
+  max-width: 1400px;
+}
 ul.list-icon1 li {
   font-family: "Poppins";
 }
@@ -20,42 +23,61 @@ ul.list-icon1 li {
   align-items: center;
   gap: 20px;
 }
+.sub-two h1 {
+  color: white;
+  font-size: 60px;
+}
 
 @media screen and (max-width: 990px) {
   ul.list-icon1 {
     border-right: none;
+    font-size: 14px;
   }
   .slider-type1 img {
-    width: 295px !important;
-    height: 247px !important;
-    margin-right: -125px;
+    width: 100% !important;
+    height: 100% !important;
   }
-  .slider-type {
-    padding-right: 93px;
+  .sub-two h1 {
+    color: white;
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 770px) {
   .slider-type1 img {
-    width: 233px !important;
-    height: 210px !important;
+    width: 100% !important;
+    height: 100% !important;
     margin-right: -80px;
   }
 }
 @media screen and (max-width: 570px) {
   .slider-type1 img {
-    width: 217px !important;
-    height: 197px !important;
+    width: 100% !important;
+    height: 100% !important;
     margin-right: -76px;
-    margin-left: 22px !important;
   }
   .slider-type {
     padding-right: 0px;
   }
+  .sub-slide span {
+    color: white;
+    font-size: 10px;
+  }
+  .slider-type {
+    padding: 15px;
+  }
+  .sub-two h1 {
+    color: white;
+    font-size: 18px;
+  }
+  .sub-slide img {
+    width: 30px !important;
+    height: 25px !important;
+  }
 }
 @media screen and (max-width: 470px) {
   .slider-type1 img {
-    width: 184px !important;
-    height: 176px !important;
+    width: 100% !important;
+    height: 100% !important;
 
     margin-left: 0px !important;
   }
@@ -64,7 +86,7 @@ ul.list-icon1 li {
 .right-slider {
   background: black;
   width: 100%;
-  height: 340px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,14 +96,12 @@ ul.list-icon1 li {
   width: 50px;
   height: 46px;
 }
-.col-lg-9.bn {
-  padding-top: 20px;
-}
+
 .slider-type1 img {
-  width: 375px;
-  height: 285px;
-  margin-left: -30px;
-  margin-top: 11px;
+  width: 100%;
+  height: 100%;
+  /* margin-left: -30px;
+  margin-top: 11px; */
 }
 
 .sub-slide {
@@ -107,8 +127,7 @@ ul.list-icon1 li {
   border-bottom: 1px solid;
 }
 .slider-type {
-  margin-left: -70px;
-  margin-bottom: 20px;
+  padding-left: 20px;
 }
 .dots {
   display: flex;

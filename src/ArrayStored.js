@@ -14,6 +14,7 @@ const array = [
     title: "we",
     price: "12",
     bracketvalue: "55",
+    cart: "Add to Cart",
   },
   {
     percentage: "35",
@@ -21,6 +22,7 @@ const array = [
     title: "we",
     price: "12",
     bracketvalue: "65",
+    cart: "Add to Cart",
   },
   {
     percentage: "67",
@@ -28,6 +30,7 @@ const array = [
     title: "we",
     price: "78",
     bracketvalue: "34",
+    cart: "Add to Cart",
   },
 ];
 

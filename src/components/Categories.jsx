@@ -15,13 +15,15 @@ function Categories() {
             </div>
             <span>Categories</span>
           </div>
-          <div className="col-lg-12 fgh">
-            <div className="col-lg-6 ghd">
+        </div>
+
+        <div className="row">
+          <div className="bnm">
+            <div className="col-lg-6">
               <h1>Browse By Category</h1>
             </div>
-            <div className="col-lg-3"></div>
 
-            <div className="col-lg-3">
+            <div className="col-lg-6">
               <div className="arrow">
                 <FaRegArrowAltCircleLeft />
                 <FaRegArrowAltCircleRight />
@@ -29,10 +31,11 @@ function Categories() {
             </div>
           </div>
         </div>
+
         <div className="row">
           {category.map(() => {
             return (
-              <div className="col-lg-2">
+              <div className="col-lg-2 col-md-6 col-sm-6">
                 <div className="category">
                   <div className="sub-cat">
                     {<IoIosPhonePortrait />}

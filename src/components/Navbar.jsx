@@ -7,6 +7,7 @@ import { CiHeart } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { CiMenuBurger } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,31 +32,45 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className="nav-bar">
-          <div className="nav-img">
-            <h1>Exclusive</h1>
-          </div>
-
-          <div className={`nav-links ${isOpen ? "active" : ""}`}>
-            <ul className="list-icon">
-              <li>Home</li>
-              <li>Contact</li>
-              <li>About</li>
-              <li>Sign Up</li>
-            </ul>
-          </div>
-
-          <div className="nav-icons">
-            <div className="sub-but">
-              <span>What are you looking for?</span>
-              <CiSearch />
+      <div className="sec-nav">
+        <div className="container">
+          <div className="nav-bar">
+            <div className="nav-img">
+              <h1>Exclusive</h1>
             </div>
-            <CiHeart />
-            <IoCartOutline />
-          </div>
-          <div className="toogle" onClick={toggleNavbar}>
-            <CiMenuBurger />
+
+            <div className={`nav-links ${isOpen ? "active" : ""}`}>
+              <ul className="list-icon">
+                <li>
+                  <Link to="home">Home</Link>
+                </li>
+                <li>
+                  <Link to="about">About</Link>
+                </li>
+                <li>
+                  <Link to="billing">Billing Details</Link>
+                </li>
+
+                <li>
+                  <Link to="data">Data</Link>
+                </li>
+                <li>
+                  <Link to="signup">Sign Up</Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="nav-icons">
+              <div className="sub-but">
+                <span>What are you looking for?</span>
+                <CiSearch />
+              </div>
+              <CiHeart />
+              <IoCartOutline />
+            </div>
+            <div className="toogle" onClick={toggleNavbar}>
+              <CiMenuBurger />
+            </div>
           </div>
         </div>
       </div>
@@ -69,10 +84,22 @@ function Navbar() {
 
         <div className="mobile-links">
           <ul className="list-icon">
-            <li>Home</li>
-            <li>Contact</li>
-            <li>About</li>
-            <li>Sign Up</li>
+            <li>
+              <Link to="home">Home</Link>
+            </li>
+            <li>
+              <Link to="about">About</Link>
+            </li>
+            <li>
+              <Link to="billing">Billing Details</Link>
+            </li>
+
+            <li>
+              <Link to="data">Data</Link>
+            </li>
+            <li>
+              <Link to="signup">Sign Up</Link>
+            </li>
           </ul>
         </div>
 

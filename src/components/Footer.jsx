@@ -14,8 +14,8 @@ function Footer() {
       <div className="container">
         <div className="row">
           <div className="col-lg-1"></div>
-          <div className="col-lg-2 text-white">
-            <h5 className="fg">Exclusive</h5>
+          <div className="col-lg-2 col-md-2 col-sm-2 text-white">
+            <h5 className="fggh">Exclusive</h5>
             <h6>Subscribe</h6>
             <span className="fr">Get 10% off your first order</span>
 
@@ -26,8 +26,8 @@ function Footer() {
               </button>
             </div>
           </div>
-          <div className="col-lg-2 text-white">
-            <h5 className="fg">Support</h5>
+          <div className="col-lg-2 col-md-2 col-sm-2  text-white">
+            <h5 className="fggh">Support</h5>
 
             <span className="fr">
               111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
@@ -37,9 +37,9 @@ function Footer() {
             <br />
             <span className="fr">+88015-88888-9999</span>
           </div>
-          <div className="col-lg-2 text-white">
+          <div className="col-lg-2 col-md-2 col-sm-2  text-white">
+            <h5 className="fggh">Account</h5>
             <ul className="ghh">
-              <h5 className="fg">Account</h5>
               <li>MY Account</li>
               <li>Log</li>
               <li>Cart</li>
@@ -47,9 +47,9 @@ function Footer() {
               <li>Wishlist</li>
             </ul>
           </div>
-          <div className="col-lg-2 text-white">
+          <div className="col-lg-2 col-md-2 col-sm-2  text-white">
+            <h5 className="fggh">Qucik Links</h5>
             <ul className="ghh">
-              <h5 className="fg">Qucik Links</h5>
               <li>MY Account</li>
               <li>Log</li>
               <li>Cart</li>
@@ -57,8 +57,8 @@ function Footer() {
               <li>Wishlist</li>
             </ul>
           </div>
-          <div className="col-lg-3 text-white">
-            <h5 className="fg">Download App</h5>
+          <div className="col-lg-3 col-md-2 col-sm-2  text-white">
+            <h5 className="fggh">Download App</h5>
 
             <span className="fr">Save $3 with App New User Only</span>
             <div className="memo">
@@ -81,7 +81,7 @@ function Footer() {
         <div className="bmv">
           <div className="row">
             <div className="col-lg-12">
-              <p>Copyright Rimel 2022. All right reserved</p>
+              <p>Copyright 2024 |All right reserved</p>
             </div>
           </div>
         </div>

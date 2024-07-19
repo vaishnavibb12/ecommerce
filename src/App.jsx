@@ -1,25 +1,30 @@
 import React from "react";
 import Navbar from "./components/Navbar.jsx";
-import Slider from "./components/Slider.jsx";
-import Flashsale from "./components/Flashsale.jsx";
-import Categories from "./components/Categories.jsx";
-import SellingProduct from "./components/SellingProduct.jsx";
-import Feature from "./components/Feature.jsx";
 import Footer from "./components/Footer.jsx";
-import Demos from "./components/Demos.jsx";
+import "../src/index.css";
+import Home from "./pages/Home.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./pages/About.jsx";
+
+import Billing from "./pages/Billing.jsx";
+import Data from "./pages/Data.jsx";
+import Signup from "./pages/Signup.jsx";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Slider />
-      <Flashsale />
-      <Categories />
-      <SellingProduct />
-      <Demos />
-      <Feature />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/billing" element={<Billing />} />
+          <Route path="/data" element={<Data />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
 
-      {/* <Footer /> */}
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }

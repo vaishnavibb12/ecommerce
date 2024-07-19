@@ -122,6 +122,9 @@ svg.bg1 {
 }
 .sd {
   color: #ffc107;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .head1 span {
   color: red;

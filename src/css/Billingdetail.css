@@ -1,0 +1,58 @@
+.acor {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.check p {
+  margin-top: 15px;
+}
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px;
+  gap: 10px;
+}
+.right1 img {
+  width: 51px;
+  height: 51px;
+}
+.right1 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+}
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 150px;
+  padding-bottom: 20px;
+}
+.right {
+  padding-top: 40px;
+}
+.right2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 252px;
+  border-bottom: 1px solid;
+  margin-bottom: 20px;
+}
+.ig img {
+  width: 35%;
+  height: 100%;
+}
+.left1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.ig {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

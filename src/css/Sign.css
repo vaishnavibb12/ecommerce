@@ -1,0 +1,46 @@
+.sidebar {
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+.sidebar a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+.sidebar a:hover {
+  color: #ff3e3e;
+}
+.active {
+  color: #ff3e3e;
+}
+.profile-form {
+  padding: 20px;
+}
+.btn-save {
+  background-color: #ff3e3e;
+  color: #fff;
+}
+.btn-save:hover {
+  background-color: #ff1e1e;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.end {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.sidebar a {
+  margin-left: 20px;
+  font-size: 14px;
+}

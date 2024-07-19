@@ -16,7 +16,7 @@ span.fr {
   padding-bottom: 10px;
 }
 ul.ghh {
-  list-style: none;
+  list-style: disc;
   font-size: 12px;
   line-height: 2.5;
 }
@@ -55,4 +55,12 @@ h5.fg {
 .bmv {
   text-align: center;
   color: white;
+}
+@media screen and (max-width: 768px) {
+  button.bn {
+    padding: 2px;
+  }
+  h5.fg {
+    padding: 15px;
+  }
 }

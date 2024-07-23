@@ -25,6 +25,10 @@ ul.list-icon {
   justify-content: center;
   gap: 20px;
 }
+.container {
+  max-width: 1400px;
+  padding: 0px !important;
+}
 .sub-but {
   gap: 10px;
   display: flex;
@@ -34,14 +38,14 @@ ul.list-icon {
   padding: 8px 8px 8px 8px;
   border-radius: 5px;
 }
-.sub-action {
+/* .sub-action {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   background: black;
   color: white;
   padding: 15px;
-}
+} */
 span.vb {
   font-weight: 500;
   margin-left: 8px;
@@ -75,6 +79,7 @@ span.vb {
     transition: all ease-in 0.5s;
     /* position: relative; */
   }
+
   .mobile-links ul {
     display: flex;
     align-self: center;
@@ -85,6 +90,12 @@ span.vb {
   .mobile-links ul li {
     border-bottom: 1px solid;
     text-align: center;
+  }
+  .nav-links ul {
+    flex-direction: column;
+  }
+  .nav-bar {
+    flex-direction: column;
   }
 
   .nav-img.rt {
@@ -121,10 +132,6 @@ span.vb {
   .nav-icons {
     display: none;
   }
-  .nav-bar {
-    justify-content: space-between;
-    margin-left: 10px;
-  }
 }
 
 .toogle {
@@ -132,11 +139,9 @@ span.vb {
   background: white;
   padding: 5px;
   /* display: none; */
-  top: 0;
-  right: 20px;
-  width: 30px;
-  /* align-items: center;
-  justify-content: space-around; */
+  top: 15px;
+  right: 37px;
+  width: 31px;
 }
 
 @media screen and (max-width: 600px) {
@@ -160,4 +165,11 @@ span.vb {
   left: 0;
   transition: all ease-in 0.5s; */
   display: none;
+}
+.sec-nav {
+  position: fixed;
+  top: 0;
+  background: white;
+  width: 100%;
+  z-index: 20;
 }

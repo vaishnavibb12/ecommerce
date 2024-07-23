@@ -57,6 +57,9 @@ function Navbar() {
                 <li>
                   <Link to="signup">Sign Up</Link>
                 </li>
+                <li>
+                  <Link to="product">Product</Link>
+                </li>
               </ul>
             </div>
 
@@ -82,7 +85,7 @@ function Navbar() {
           <h1>Exclusive</h1>
         </div> */}
 
-        <div className="mobile-links">
+        {/* <div className="mobile-links">
           <ul className="list-icon">
             <li>
               <Link to="home">Home</Link>
@@ -100,17 +103,20 @@ function Navbar() {
             <li>
               <Link to="signup">Sign Up</Link>
             </li>
+            <li>
+              <Link to="product">Product</Link>
+            </li>
           </ul>
-        </div>
+        </div> */}
 
-        <div className="mobile-icons">
+        {/* <div className="mobile-icons">
           <div className="sub-but1">
             <span>What are you looking for?</span>
             <CiSearch />
           </div>
           <CiHeart />
           <IoCartOutline />
-        </div>
+        </div> */}
       </div>
     </div>
   );

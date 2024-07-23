@@ -1,0 +1,123 @@
+.product-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.price {
+  font-size: 1.25rem;
+  color: #d9534f;
+}
+.rating {
+  color: #ffad33;
+}
+.small-text {
+  font-size: 0.875rem;
+}
+.pro-img img {
+  width: 100%;
+  height: auto;
+  background: #80808014;
+  margin-bottom: 10px;
+}
+.fghj svg {
+  width: 30px;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.img2 img {
+  width: 100%;
+  height: auto;
+}
+.img2 {
+  background: #80808014;
+}
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+.active {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+.label {
+  display: flex;
+
+  justify-content: start;
+  gap: 20px;
+}
+.lab {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  /* border: 1px solid; */
+  /* margin-bottom: 10px; */
+}
+.lab p {
+  border: 1px solid;
+  padding: 0px 5px 0px 5px;
+  border-radius: 5px;
+}
+p.mt-2.small-text.df {
+  font-size: 0.875rem;
+  border-bottom: 1px solid #8080809e;
+  padding-bottom: 5px;
+}
+.asd.mt-3 svg {
+  width: 40px;
+  height: 40px;
+}
+.asd.mt-3 {
+  display: flex;
+  /* align-items: center; */
+  justify-content: start;
+  gap: 10px;
+  border-bottom: 1px solid #808080a6;
+}
+.style {
+  border: 1px solid;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 0px 10px 0px 10px;
+}
+.fghj {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 40px;
+}
+.quantity-selector {
+  display: inline-flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.quantity-selector input {
+  width: 50px;
+  text-align: center;
+  border: none;
+}
+.quantity-selector button {
+  background-color: #f8f9fa;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+.quantity-selector button:focus {
+  outline: none;
+}
+.quantity-selector .btn-decrement {
+  background-color: #dc3545;
+  color: white;
+}
+.quantity-selector .btn-increment {
+  background-color: #dc3545;
+  color: white;
+}
+button.btn.btn-danger.btn-block {
+  font-size: 14px;
+}

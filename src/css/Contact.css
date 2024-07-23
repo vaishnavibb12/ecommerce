@@ -38,3 +38,52 @@
   border-bottom: 1px solid;
   margin-bottom: 15px;
 }
+
+/* .create-account-form input {
+  width: 100%;
+  margin-bottom: 18px;
+}
+.create-account-form {
+  width: 500px;
+  height: auto !important;
+  position: relative;
+  top: 80%;
+  left: 0;
+  transform: translate(-59%, -95%) !important;
+  background: #00bcd4;
+  padding: 20px 20px 20px 20px;
+}
+.create-account-form button {
+  margin-top: 10px;
+}
+.create-account-form svg {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+} */
+.modelbackground {
+  width: 163vw;
+  height: 150vh;
+  background: rgba(0, 0, 0, 0.692);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modelcontainer {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.tog svg {
+  position: relative;
+  /* right: 0; */
+  left: 420px;
+  /* bottom: 18px; */
+  top: -30px;
+}

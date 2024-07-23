@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Dataentry.css";
 import flash from "../assets/flash1.png";
 import data from "../Data";
 
 function Dataentry() {
+  const [quantity, setQuantity] = useState(2);
+
+  const handleDecrement = (item) => {
+    console.log(item);
+    if (quantity > min) {
+      setQuantity(item.quantity - 1);
+    }
+  };
+
+  const handleIncrement = (item) => {
+    if (quantity < max) {
+      setQuantity(item.quantity + 1);
+    }
+  };
   return (
     <div className="section">
       <div className="container">
@@ -37,15 +51,20 @@ function Dataentry() {
                       <div>{item.content}</div>
                     </div>
                     <div className="item-price">{item.price}</div>
-                    <div className="item-quantity">
-                      <input
-                        type="number"
-                        value={item.quantity}
-                        id="quantity"
-                        name="quantity"
-                        min="1"
-                        max="5"
-                      />
+                    <div class="quantity-selector">
+                      <button
+                        className="btn-decrement"
+                        onClick={() => handleDecrement(item)}
+                      >
+                        -
+                      </button>
+                      <input type="text" value={item.quantity} readOnly />
+                      <button
+                        className="btn-increment"
+                        onClick={() => handleIncrement(item)}
+                      >
+                        +
+                      </button>
                     </div>
                     <div className="item-price">{item.total}</div>
                   </div>

@@ -6,13 +6,24 @@ import "react-toastify/dist/ReactToastify.css";
 import "../css/Contact.css";
 import { FaGoogle } from "react-icons/fa";
 
+import { ImCross } from "react-icons/im";
+
+import numberCodeDb from "../Country.js";
+
+import Model from "./Model.jsx";
+
 function Abouts() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
+    phone: "",
   });
-  const [errors, setErrors] = useState({});
+  const handleChange = (e) => {
+    // const [errors, setErrors] = useState({});
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const validate = () => {
     const errors = {};
@@ -26,29 +37,37 @@ function Abouts() {
     return errors;
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-  const notify = () => {
-    toast.success("Success Notification!");
-  };
+  // const notify = () => {
+  //   toast.success("Success Notification!");
+  // };
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (formData.name === "") {
+      alert("Enter Name");
     } else if (formData.email === "") {
       alert("Please Enter Email");
     } else if (formData.password === "") {
       alert("Please Enter Password");
+    } else if (!formData.password) {
+      alert("Password is required");
+    } else if (formData.password.length < 8) {
+      alert("Password must be at least 8 characters long");
+    } else if (!/[A-Z]/.test(formData.password)) {
+      alert("Password must contain at least one uppercase letter");
+    } else if (!/[a-z]/.test(formData.password)) {
+      alert("Password must contain at least one lowercase letter");
+    } else if (!/[0-9]/.test(formData.password)) {
+      alert("Password must contain at least one number");
+    } else if (!/[!@#$%^&*]/.test(formData.password)) {
+      alert("Password must contain at least one special character");
     } else {
-      const errors = validate();
-      if (Object.keys(errors).length === 0) {
-        console.log("Form data:", formData);
-      } else {
-        setErrors(errors);
-      }
+      toast.success("Success Notification");
     }
   };
+  console.log(formData);
+
+  const [openModal, setOpenModel] = useState(false);
 
   return (
     <>
@@ -63,7 +82,7 @@ function Abouts() {
               <p>Enter Your Details</p>
               <form id="contact-form" onSubmit={handleSubmit} method="POST">
                 <div className="form-group">
-                  <label htmlFor="name">Name</label>
+                  <label>Name</label>
                   <input
                     type="text"
                     className="form-control"
@@ -73,7 +92,7 @@ function Abouts() {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="exampleInputEmail1">Email address</label>
+                  <label>Email address</label>
                   <input
                     type="email"
                     className="form-control"
@@ -83,8 +102,33 @@ function Abouts() {
                     onChange={handleChange}
                   />
                 </div>
+                {/* {numberCodeDb.map((item) => {
+                  return ( */}
                 <div className="form-group">
-                  <label htmlFor="exampleInputPassword">Password</label>
+                  <label>Phone Number:</label>
+
+                  <div className="kl">
+                    <select>
+                      {numberCodeDb.map((item) => (
+                        <option key={item.code} value={item.code}>
+                          {item.code} ({item.phone})
+                        </option>
+                      ))}
+                    </select>
+                    <input
+                      type="text"
+                      id="phone"
+                      // value={formData.phone}
+                      // onChange={handlePhoneChange}
+                      maxLength="10"
+                      className="phone-input"
+                    />
+                  </div>
+                </div>
+                {/* );
+                })} */}
+                <div className="form-group">
+                  <label>Password</label>
                   <input
                     type="password"
                     className="form-control"
@@ -93,35 +137,31 @@ function Abouts() {
                     onChange={handleChange}
                   />
                 </div>
-                {/* <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea
-                  className="form-control"
-                  rows="5"
-                  name="Message"
-                  value={Message}
-                  onChange={Handlesubmit}
-                />
-              </div> */}
-                <button
-                  type="submit"
-                  className="btn btn-light"
-                  onClick={notify}
-                >
+
+                <button type="submit" className="btn btn-light">
                   Submit
                 </button>
                 <ToastContainer />
               </form>
+
               <div className="but">
-                <button type="button" class="btn btn-primary">
-                  Create Account
+                <button
+                  class="btn btn-primary"
+                  onClick={() => {
+                    setOpenModel(true);
+                  }}
+                >
+                  {" "}
+                  Create Account{" "}
                 </button>
-                <div className="fg">
-                  <button type="button" class="btn btn-light">
-                    <FaGoogle /> Sign Up With Google
-                  </button>
-                </div>
+                {openModal && <Model closModel={setOpenModel} />}
               </div>
+              <div className="fg">
+                <button type="button" class="btn btn-light">
+                  <FaGoogle /> Sign Up With Google
+                </button>
+              </div>
+
               <div className="but1">
                 <p>
                   Already Have Account? <span> Log In</span>

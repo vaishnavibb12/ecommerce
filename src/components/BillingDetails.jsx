@@ -48,9 +48,7 @@ function BillingDetails() {
 
     return errors;
   };
-  const notify = () => {
-    toast.success("Success Notification!");
-  };
+  // const notify = () => {};
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -67,12 +65,7 @@ function BillingDetails() {
     } else if (formData.password === "") {
       alert("Please Enter Password");
     } else {
-      const errors = validate();
-      if (Object.keys(errors).length === 0) {
-        console.log("Form data:", formData);
-      } else {
-        setErrors(errors);
-      }
+      toast.success("Success Notification!");
     }
   };
   return (
@@ -175,7 +168,7 @@ function BillingDetails() {
                 />
               </div>
 
-              <button type="submit" className="btn btn-light" onClick={notify}>
+              <button type="submit" className="btn btn-light">
                 Submit
               </button>
               <ToastContainer />
@@ -253,7 +246,7 @@ function BillingDetails() {
               <div className="right-side">
                 <div className="left1">
                   <button type="button" class="btn btn-light">
-                    Couposn Code
+                    Coupon Code
                   </button>
                   <button type="button" class="btn btn-danger">
                     Apply Coupon

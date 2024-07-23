@@ -44,7 +44,7 @@ function Sign() {
     } else if (!/[!@#$%^&*]/.test(formData.password)) {
       errors.password = "Password must contain at least one special character";
     } else {
-      toast.success("kjgdsukig");
+      toast.success("Success Notification");
     }
   };
 

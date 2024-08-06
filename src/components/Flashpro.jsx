@@ -140,7 +140,7 @@ function Flashpro() {
                 <p className="we small-text">
                   <strong>Return Delivery</strong>
                   <br />
-                  30 Days Delivery Returns. <a href="#">Details</a>
+                  30 Days Delivery Returns. <a href="/data">Details</a>
                 </p>
               </div>
             </div>

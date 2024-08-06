@@ -10,6 +10,7 @@ import Billing from "./pages/Billing.jsx";
 import Data from "./pages/Data.jsx";
 import Signup from "./pages/Signup.jsx";
 import Product from "./pages/Product.jsx";
+import OurStory from "./pages/OurStory.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/data" element={<Data />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/story" element={<OurStory />} />
         </Routes>
 
         <Footer />

@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-// import con from "../assets/contact.jpg";
-// import { RiEyeCloseFill } from "react-icons/ri";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../css/Contact.css";
 import { FaGoogle } from "react-icons/fa";
 
-import { ImCross } from "react-icons/im";
-
 import numberCodeDb from "../Country.js";
 
 import Model from "./Model.jsx";
+import Log from "./Log.jsx";
 
 function Abouts() {
   const [formData, setFormData] = useState({
@@ -68,6 +66,7 @@ function Abouts() {
   console.log(formData);
 
   const [openModal, setOpenModel] = useState(false);
+  const [logModel, setlogModel] = useState(false);
 
   return (
     <>
@@ -163,9 +162,17 @@ function Abouts() {
               </div>
 
               <div className="but1">
-                <p>
-                  Already Have Account? <span> Log In</span>
-                </p>
+                <p>Already Have Account? </p>
+                <button
+                  class="btn btn-primary"
+                  onClick={() => {
+                    setlogModel(true);
+                  }}
+                >
+                  {" "}
+                  Log In{" "}
+                </button>
+                {logModel && <Log closeModel={setlogModel} />}
               </div>
             </div>
           </div>

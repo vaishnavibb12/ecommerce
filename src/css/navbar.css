@@ -1,7 +1,7 @@
 .nav-bar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: start;
   padding: 15px;
   border-bottom: 1px solid #80808045;
 }
@@ -22,7 +22,7 @@ ul.list-icon {
 .nav-icons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 20px;
 }
 .container {
@@ -33,10 +33,11 @@ ul.list-icon {
   gap: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: #dcdcdc73;
+  justify-content: flex-end;
+  /* background: #dcdcdc73; */
   padding: 8px 8px 8px 8px;
   border-radius: 5px;
+  width: 50%;
 }
 /* .sub-action {
   display: flex;
@@ -132,6 +133,14 @@ span.vb {
   .nav-icons {
     display: none;
   }
+  ul.subdeopdown li {
+    position: static;
+    visibility: visible;
+    width: auto;
+    background: #f9f9f9;
+    opacity: 1;
+    margin: 0px !important;
+  }
 }
 
 .toogle {
@@ -172,4 +181,39 @@ span.vb {
   background: white;
   width: 100%;
   z-index: 20;
+}
+ul.subdeopdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  list-style: none;
+  background: white;
+  top: 40px;
+  padding: 0px;
+  text-align: center !important;
+  border: 1px solid black;
+  /* align-items: center; */
+  width: 110px;
+  height: auto;
+  transform: translateY(-320px);
+  transition: ease-in 0.7s;
+  z-index: -1;
+}
+li.drop:hover ul.subdeopdown {
+  transform: translateY(0px);
+}
+ul.subdeopdown li {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+li.drop {
+  position: relative;
+}
+
+.sub-but select {
+  width: 50%;
 }

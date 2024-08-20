@@ -9,6 +9,12 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { CiMenuBurger } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import numberCodeDb from "../Country.js";
+import { FaCircleUser } from "react-icons/fa6";
+import { FaRegUser } from "react-icons/fa";
+import { TbShoppingCartStar } from "react-icons/tb";
+import { ImCross } from "react-icons/im";
+import { FaRegStar } from "react-icons/fa";
+import { CiLogout } from "react-icons/ci";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,7 +92,33 @@ function Navbar() {
               </div>
               <CiHeart />
               <IoCartOutline />
+              <div className="miniddrop">
+                <FaCircleUser className="mini-drop" />
+                <div className="drops">
+                  <div className="down">
+                    <FaRegUser />
+                    <p>Manage My Account</p>
+                  </div>
+                  <div className="down">
+                    <TbShoppingCartStar />
+                    <p> My Order</p>
+                  </div>{" "}
+                  <div className="down">
+                    <ImCross />
+                    <p>My Cancellations</p>
+                  </div>
+                  <div className="down">
+                    <FaRegStar />
+                    <p>My Reviews</p>
+                  </div>
+                  <div className="down">
+                    <CiLogout />
+                    <p>Logout</p>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div className="toogle" onClick={toggleNavbar}>
               <CiMenuBurger />
             </div>

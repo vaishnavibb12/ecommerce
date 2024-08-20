@@ -8,7 +8,7 @@ button.bn {
 }
 .section.sec-fluid {
   background: black;
-  padding: 40px 0px 0px 0px;
+  padding: 40px 20px 40px 20px;
 }
 
 span.fr {
@@ -63,4 +63,8 @@ h5.fg {
   h5.fg {
     padding: 15px;
   }
+}
+
+.bhj {
+  margin-bottom: 15px;
 }

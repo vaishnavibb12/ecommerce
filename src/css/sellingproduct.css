@@ -153,7 +153,7 @@ span.hjs {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0px 20px 0px;
+  padding: 10px 10px 20px 10px;
 }
 @media screen and (max-width: 576px) {
   h1 {

@@ -31,7 +31,7 @@ function Slider() {
               <li>Health & Beauty</li>
             </ul>
           </div>
-          <div className="col-sm-9 col-md-8 col-lg-9 bn">
+          <div className="col-sm-9 col-md-8 col-lg-9 bnd">
             <div className="right-slider">
               <div className="col-sm-6 col-md-6 col-lg-6">
                 <div className="slider-type">
@@ -60,7 +60,7 @@ function Slider() {
             <div className="dots">
               <GoDotFill />
               <GoDotFill />
-              <GoDotFill className="fg" />
+              <GoDotFill className="fgd" />
               <GoDotFill />
               <GoDotFill />
             </div>

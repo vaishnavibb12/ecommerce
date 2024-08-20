@@ -8,7 +8,6 @@ import { FaGoogle } from "react-icons/fa";
 import numberCodeDb from "../Country.js";
 
 import Model from "./Model.jsx";
-import Log from "./Log.jsx";
 
 function Abouts() {
   const [formData, setFormData] = useState({
@@ -66,7 +65,6 @@ function Abouts() {
   console.log(formData);
 
   const [openModal, setOpenModel] = useState(false);
-  const [logModel, setlogModel] = useState(false);
 
   return (
     <>
@@ -163,16 +161,7 @@ function Abouts() {
 
               <div className="but1">
                 <p>Already Have Account? </p>
-                <button
-                  class="btn btn-primary"
-                  onClick={() => {
-                    setlogModel(true);
-                  }}
-                >
-                  {" "}
-                  Log In{" "}
-                </button>
-                {logModel && <Log closeModel={setlogModel} />}
+                Log In
               </div>
             </div>
           </div>

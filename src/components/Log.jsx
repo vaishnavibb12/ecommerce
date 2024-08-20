@@ -47,7 +47,7 @@ function Log({ closeModel }) {
   console.log(formData);
 
   return (
-    <div className="modelbackground">
+    <div className="modelbackground1">
       <div className="modelcontainer">
         {/* <div className="create-account-form"> */}
         <form onSubmit={handleSubmit} method="POST">

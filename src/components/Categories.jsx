@@ -4,6 +4,10 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import "../css/categories.css";
 import { IoIosPhonePortrait } from "react-icons/io";
 import category from "../Category";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 function Categories() {
   return (
     <div className="section">
@@ -31,21 +35,32 @@ function Categories() {
             </div>
           </div>
         </div>
-
-        <div className="row">
-          {category.map(() => {
-            return (
-              <div className="col-lg-2 col-md-6 col-sm-6">
-                <div className="category">
-                  <div className="sub-cat">
-                    {<IoIosPhonePortrait />}
-                    <span className="sec">Phones</span>
-                  </div>
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          <div className="row">
+            {category.map(() => {
+              return (
+                <div className="col-lg-2 col-md-6 col-sm-6">
+                  <SwiperSlide>
+                    <div className="category">
+                      <div className="sub-cat">
+                        {<IoIosPhonePortrait />}
+                        <span className="sec">Phones</span>
+                      </div>
+                    </div>
+                  </SwiperSlide>
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        </Swiper>
       </div>
     </div>
   );

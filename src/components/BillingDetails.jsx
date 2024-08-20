@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import flash from "../assets/flash1.png";
 import bd from "../assets/brand.png";
+import Log from "./Log.jsx";
 function BillingDetails() {
   const [formData, setFormData] = useState({
     firstname: "",
@@ -68,6 +69,8 @@ function BillingDetails() {
       toast.success("Success Notification!");
     }
   };
+
+  const [logModel, setlogModel] = useState(false);
   return (
     <div className="section">
       <div className="container">
@@ -248,9 +251,15 @@ function BillingDetails() {
                   <button type="button" class="btn btn-light">
                     Coupon Code
                   </button>
-                  <button type="button" class="btn btn-danger">
+                  <button
+                    class="btn btn-primary"
+                    onClick={() => {
+                      setlogModel(true);
+                    }}
+                  >
                     Apply Coupon
                   </button>
+                  {logModel && <Log closeModel={setlogModel} />}
                 </div>
               </div>
               <div className="right-side">

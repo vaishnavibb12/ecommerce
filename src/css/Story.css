@@ -48,3 +48,12 @@
 .open-box {
   padding-top: 20px;
 }
+.modelbackground1 {
+  width: 139vw;
+  height: 213vh;
+  background: rgba(0, 0, 0, 0.692);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

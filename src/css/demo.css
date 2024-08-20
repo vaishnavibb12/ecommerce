@@ -86,4 +86,7 @@
     align-items: center;
     flex-wrap: wrap;
   }
+  .av1 span {
+    text-align: center;
+  }
 }

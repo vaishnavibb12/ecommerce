@@ -136,6 +136,17 @@ ul.list-icon1 li {
   color: gray;
   margin-top: -22px;
 }
-svg.fg {
+svg.fgd {
   color: rebeccapurple;
+}
+.fgd {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* margin-top: 10px; */
+}
+.bnd {
+  /* border-bottom: 1px solid grey; */
+  padding-top: 10px;
+  height: 100%;
 }

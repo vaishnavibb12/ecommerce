@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/flashsale.css";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
-import flash from "../assets/flash1.png";
+
 import { FaStar } from "react-icons/fa";
 import array from "../ArrayStored";
+import Prodpopup from "./Prodpopup.jsx";
+
 function Flashsale() {
+  const [openProdpopup, setOpenProdpopup] = useState(false);
+
   return (
     <div className="section">
       <div className="container">
@@ -77,8 +81,10 @@ function Flashsale() {
                     <IoEyeOutline className="bg1" />
                   </div>
                 </div>
-                <div className="cart">
-                  <span className="ghdf">{item.cart}</span>
+                <div className="butwe">
+                  <div className="cart">
+                    <button className="ghdf">{item.cart}</button>
+                  </div>
                 </div>
                 <div className="flash-head">
                   <div className="head1">
@@ -104,10 +110,18 @@ function Flashsale() {
         </div>
         <div className="row">
           <div className="col-lg-12">
-            <div className="but1">
-              <button type="button" class="btn btn-dark">
+            <div className="but2">
+              <button
+                type="button"
+                class="btn btn-dark"
+                onClick={() => {
+                  setOpenProdpopup(true);
+                }}
+              >
                 View Product
               </button>
+
+              {openProdpopup && <Prodpopup closeProdpopup={setOpenProdpopup} />}
             </div>
           </div>
         </div>

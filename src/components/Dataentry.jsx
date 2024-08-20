@@ -6,18 +6,15 @@ import data from "../Data";
 function Dataentry() {
   const [quantity, setQuantity] = useState(2);
 
-  const handleDecrement = (item) => {
-    console.log(item);
-    if (quantity > min) {
-      setQuantity(item.quantity - 1);
+  const handleDecrement = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
     }
+  };
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
   };
 
-  const handleIncrement = (item) => {
-    if (quantity < max) {
-      setQuantity(item.quantity + 1);
-    }
-  };
   return (
     <div className="section">
       <div className="container">
@@ -52,17 +49,11 @@ function Dataentry() {
                     </div>
                     <div className="item-price">{item.price}</div>
                     <div class="quantity-selector">
-                      <button
-                        className="btn-decrement"
-                        onClick={() => handleDecrement(item)}
-                      >
+                      <button class="btn-decrement" onClick={handleDecrement}>
                         -
                       </button>
-                      <input type="text" value={item.quantity} readOnly />
-                      <button
-                        className="btn-increment"
-                        onClick={() => handleIncrement(item)}
-                      >
+                      <input type="text" value={quantity} readnly />
+                      <button class="btn-increment" onClick={handleIncrement}>
                         +
                       </button>
                     </div>

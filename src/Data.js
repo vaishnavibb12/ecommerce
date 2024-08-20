@@ -12,7 +12,7 @@ const data = [
     img: flash,
     content: "Monitor",
     price: "$113",
-    quantity: 2,
+    quantity: 6,
     total: "6767",
   },
 ];

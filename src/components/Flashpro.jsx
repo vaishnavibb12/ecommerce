@@ -115,7 +115,7 @@ function Flashpro() {
                 <button class="btn-decrement" onClick={handleDecrement}>
                   -
                 </button>
-                <input type="text" value={quantity} readOnly />
+                <input type="text" value={quantity} readnly />
                 <button class="btn-increment" onClick={handleIncrement}>
                   +
                 </button>

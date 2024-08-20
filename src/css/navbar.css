@@ -188,7 +188,7 @@ ul.subdeopdown {
   position: absolute;
   list-style: none;
   background: white;
-  top: 40px;
+  top: 15px;
   padding: 0px;
   text-align: center !important;
   border: 1px solid black;
@@ -197,7 +197,7 @@ ul.subdeopdown {
   height: auto;
   transform: translateY(-320px);
   transition: ease-in 0.7s;
-  z-index: -1;
+  z-index: 0;
 }
 li.drop:hover ul.subdeopdown {
   transform: translateY(0px);
@@ -216,4 +216,31 @@ li.drop {
 
 .sub-but select {
   width: 50%;
+}
+
+.down {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+.down p {
+  font-size: 13px;
+}
+.drops {
+  background: beige;
+  padding: 10px;
+  position: absolute;
+  transform: translateY(-320px);
+  transition: ease-in 0.7s;
+  z-index: 0;
+  margin-top: 10px;
+  /* transform: translate(-75px, -320px); */
+  margin-left: -165px;
+}
+.miniddrop {
+  position: relative;
+}
+.miniddrop:hover .drops {
+  transform: translateY(0px);
 }

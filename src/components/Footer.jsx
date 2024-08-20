@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Footer.css";
 import { IoSendSharp } from "react-icons/io5";
 import qr from "../assets/qr.jpg";
@@ -7,14 +7,20 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import languages from "../Language";
 
 function Footer() {
+  const [selectedLanguage, setSelectedLanguage] = useState(languages[0].code);
+
+  const handleChange = (event) => {
+    setSelectedLanguage(event.target.value);
+  };
   return (
     <div className="section sec-fluid">
       <div className="container">
         <div className="row">
           <div className="col-lg-1"></div>
-          <div className="col-lg-2 col-md-2 col-sm-2 text-white">
+          <div className="col-lg-2 col-md-2 col-sm-2 text-white bhj">
             <h5 className="fggh">Exclusive</h5>
             <h6>Subscribe</h6>
             <span className="fr">Get 10% off your first order</span>
@@ -26,7 +32,7 @@ function Footer() {
               </button>
             </div>
           </div>
-          <div className="col-lg-2 col-md-2 col-sm-2  text-white">
+          <div className="col-lg-2 col-md-2 col-sm-2  text-white bhj">
             <h5 className="fggh">Support</h5>
 
             <span className="fr">
@@ -37,7 +43,7 @@ function Footer() {
             <br />
             <span className="fr">+88015-88888-9999</span>
           </div>
-          <div className="col-lg-2 col-md-2 col-sm-2  text-white">
+          <div className="col-lg-2 col-md-2 col-sm-2  text-white bhj">
             <h5 className="fggh">Account</h5>
             <ul className="ghh">
               <li>MY Account</li>
@@ -47,7 +53,7 @@ function Footer() {
               <li>Wishlist</li>
             </ul>
           </div>
-          <div className="col-lg-2 col-md-2 col-sm-2  text-white">
+          <div className="col-lg-2 col-md-2 col-sm-2  text-white bhj">
             <h5 className="fggh">Qucik Links</h5>
             <ul className="ghh">
               <li>MY Account</li>
@@ -57,7 +63,7 @@ function Footer() {
               <li>Wishlist</li>
             </ul>
           </div>
-          <div className="col-lg-3 col-md-2 col-sm-2  text-white">
+          <div className="col-lg-3 col-md-2 col-sm-2  text-white bhj">
             <h5 className="fggh">Download App</h5>
 
             <span className="fr">Save $3 with App New User Only</span>
@@ -82,6 +88,18 @@ function Footer() {
           <div className="row">
             <div className="col-lg-12">
               <p>Copyright 2024 |All right reserved</p>
+            </div>
+            <div className="col-lg-12">
+              <button type="button" class="btn btn-outline-info">
+                Select Languages &nbsp;
+                <select value={selectedLanguage} onChange={handleChange}>
+                  {languages.map((item) => (
+                    <option key={item.code} value={item.code}>
+                      {item.code} ({item.name})
+                    </option>
+                  ))}
+                </select>
+              </button>
             </div>
           </div>
         </div>

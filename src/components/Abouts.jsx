@@ -66,6 +66,44 @@ function Abouts() {
 
   const [openModal, setOpenModel] = useState(false);
 
+  const [items, setItems] = useState([
+    { id: 1, name: "Item 1", value: 100 },
+    { id: 2, name: "Item 2", value: 200 },
+    { id: 3, name: "Item 3", value: 300 },
+  ]);
+
+  const [editedItem, setEditedItem] = useState({
+    id: null,
+    name: "",
+    value: "",
+  });
+
+  // Function to delete an item
+  const deleteItem = (id) => {
+    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+
+  // Function to handle input changes for editing
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setEditedItem((prevItem) => ({ ...prevItem, [name]: value }));
+  };
+
+  // Function to start editing an item
+  const editItem = (item) => {
+    setEditedItem(item);
+  };
+
+  // Function to update the item
+  const updateItem = (id) => {
+    setItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === id ? { ...item, ...editedItem } : item
+      )
+    );
+    setEditedItem({ id: null, name: "", value: "" }); // Clear the edited item state
+  };
+
   return (
     <>
       <div className="section">
@@ -162,6 +200,43 @@ function Abouts() {
               <div className="but1">
                 <p>Already Have Account? </p>
                 Log In
+              </div>
+              <div>
+                <h1>Item List</h1>
+                <ul>
+                  {items.map((item) => (
+                    <li key={item.id}>
+                      {item.name} - {item.value}
+                      <button onClick={() => deleteItem(item.id)}>
+                        Delete
+                      </button>
+                      <button onClick={() => editItem(item)}>Edit</button>
+                    </li>
+                  ))}
+                </ul>
+
+                {editedItem.id && (
+                  <div>
+                    <h2>Edit Item</h2>
+                    <input
+                      type="text"
+                      name="name"
+                      value={editedItem.name}
+                      onChange={handleInputChange}
+                      placeholder="Item Name"
+                    />
+                    <input
+                      type="number"
+                      name="value"
+                      value={editedItem.value}
+                      onChange={handleInputChange}
+                      placeholder="Item Value"
+                    />
+                    <button onClick={() => updateItem(editedItem.id)}>
+                      Update
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>

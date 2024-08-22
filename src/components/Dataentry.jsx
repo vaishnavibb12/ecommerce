@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "../css/Dataentry.css";
 import flash from "../assets/flash1.png";
 import data from "../Data";
-
+import { ImCross } from "react-icons/im";
+import { MdEdit } from "react-icons/md";
 function Dataentry() {
   const [quantity, setQuantity] = useState(2);
 
@@ -13,6 +14,56 @@ function Dataentry() {
   };
   const handleIncrement = () => {
     setQuantity(quantity + 1);
+  };
+  const [data, setItems] = useState([
+    {
+      id: 1,
+      img: flash,
+      content: "laptop",
+      price: "$233",
+      quantity: 3,
+      total: "5667",
+    },
+    {
+      id: 2,
+      img: flash,
+      content: "Monitor",
+      price: "$113",
+      quantity: 6,
+      total: "6767",
+    },
+    {
+      id: 3,
+      img: flash,
+      content: "CPU",
+      price: "$133",
+      quantity: 6,
+      total: "6767",
+    },
+  ]);
+
+  const [editedItem, setEditedItem] = useState({
+    id: null,
+    price: "$",
+    quantity: "",
+  });
+  const deleteItem = (id) => {
+    setItems((preventItem) => preventItem.filter((data) => data.id != id));
+  };
+  const handleInputChange = (e) => {
+    const { price, quantity } = e.target;
+    setEditedItem((prevItem) => ({ ...prevItem, [price]: quantity }));
+  };
+  const editItem = (item) => {
+    setEditedItem(item);
+  };
+  const updateItem = (id) => {
+    setItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === id ? { ...item, ...editedItem } : item
+      )
+    );
+    setEditedItem({ id: null, price: "", quantity: "" }); // Clear the edited item state
   };
 
   return (
@@ -33,16 +84,19 @@ function Dataentry() {
           <div className="col-lg-10 col-md-12 col-sm-12">
             <div className="bg-data">
               <div className="entry">
+                <p>Id</p>
                 <p>Product</p>
                 <p>Price</p>
                 <p>Quantity</p>
                 <p>Subtotal</p>
+                <p>Delete</p>
               </div>
             </div>
             {data.map((item) => {
               return (
                 <div className="bg-data">
                   <div className="cart-item">
+                    <div className="item-id">{item.id}</div>
                     <div className="item-details">
                       <img src={item.img} alt="LCD Monitor" />
                       <div>{item.content}</div>
@@ -58,10 +112,42 @@ function Dataentry() {
                       </button>
                     </div>
                     <div className="item-price">{item.total}</div>
+                    <div className="item delete">
+                      <button onClick={() => deleteItem(item.id)}>
+                        <ImCross />
+                      </button>
+
+                      <button onClick={() => editItem(item)}>
+                        {" "}
+                        <MdEdit />
+                      </button>
+                    </div>
                   </div>
                 </div>
               );
             })}
+            {editedItem.id && (
+              <div>
+                <h2>Edit Item</h2>
+                <input
+                  type="text"
+                  name="name"
+                  value={editedItem.price}
+                  onChange={handleInputChange}
+                  placeholder="Item Price"
+                />
+                <input
+                  type="number"
+                  name="value"
+                  value={editedItem.quantity}
+                  onChange={handleInputChange}
+                  placeholder="Item Quantity"
+                />
+                <button onClick={() => updateItem(editedItem.id)}>
+                  Update
+                </button>
+              </div>
+            )}
             <div className="butt">
               <button type="button" class="btn btn-light">
                 Return To Shop

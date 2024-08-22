@@ -102,3 +102,10 @@
   justify-content: start;
   gap: 130px;
 }
+
+.item.delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}

@@ -128,12 +128,12 @@ function Navbar() {
 
       {/* mobile view */}
 
-      <div className={isOpen === true ? "moblileview" : "Disableview"}>
-        {/* <div className="nav-img rt">
+      {/* <div className={isOpen === true ? "moblileview" : "Disableview"}> */}
+      {/* <div className="nav-img rt">
           <h1>Exclusive</h1>
         </div> */}
 
-        {/* <div className="mobile-links">
+      {/* <div className="mobile-links">
           <ul className="list-icon">
             <li>
               <Link to="home">Home</Link>
@@ -157,7 +157,7 @@ function Navbar() {
           </ul>
         </div> */}
 
-        {/* <div className="mobile-icons">
+      {/* <div className="mobile-icons">
           <div className="sub-but1">
             <span>What are you looking for?</span>
             <CiSearch />
@@ -165,7 +165,7 @@ function Navbar() {
           <CiHeart />
           <IoCartOutline />
         </div> */}
-      </div>
+      {/* </div> */}
     </div>
   );
 }

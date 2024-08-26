@@ -50,13 +50,6 @@ function BillingDetails() {
     return errors;
   };
   // const notify = () => {};
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -71,6 +64,32 @@ function BillingDetails() {
   };
 
   const [logModel, setlogModel] = useState(false);
+  const [data, setData] = useState([
+    { id: 1, name: "Item 1", value: "Value 1" },
+    { id: 2, name: "Item 2", value: "Value 2" },
+    // more items
+  ]);
+  const [editingId, setEditingId] = useState(null);
+  const [newValue, setNewValue] = useState("");
+
+  // Function to handle edit click
+  const handleEditClick = (id, currentValue) => {
+    setEditingId(id);
+    setNewValue(currentValue);
+  };
+
+  // Function to handle value change
+  const handleChange = (e) => {
+    setNewValue(e.target.value);
+  };
+
+  // Function to handle save
+  const handleSaveClick = (id) => {
+    setData(
+      data.map((item) => (item.id === id ? { ...item, value: newValue } : item))
+    );
+    setEditingId(null);
+  };
   return (
     <div className="section">
       <div className="container">
@@ -272,6 +291,50 @@ function BillingDetails() {
             </div>
           </div>
           <div className="col-lg-1 col-md-6 col-sm-12"></div>
+        </div>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Value</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((item) => (
+                <tr key={item.id}>
+                  <td>{item.id}</td>
+                  <td>{item.name}</td>
+                  <td>
+                    {editingId === item.id ? (
+                      <input
+                        type="text"
+                        value={newValue}
+                        onChange={handleChange}
+                      />
+                    ) : (
+                      item.value
+                    )}
+                  </td>
+                  <td>
+                    {editingId === item.id ? (
+                      <button onClick={() => handleSaveClick(item.id)}>
+                        Save
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => handleEditClick(item.id, item.value)}
+                      >
+                        Edit
+                      </button>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

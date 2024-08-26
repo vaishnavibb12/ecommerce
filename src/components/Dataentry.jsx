@@ -44,15 +44,15 @@ function Dataentry() {
 
   const [editedItem, setEditedItem] = useState({
     id: null,
-    price: "$",
-    quantity: "",
+    content: "",
+    total: "",
   });
   const deleteItem = (id) => {
     setItems((preventItem) => preventItem.filter((data) => data.id != id));
   };
   const handleInputChange = (e) => {
-    const { price, quantity } = e.target;
-    setEditedItem((prevItem) => ({ ...prevItem, [price]: quantity }));
+    const { content, total } = e.target;
+    setEditedItem((prevItem) => ({ ...prevItem, [content]: total }));
   };
   const editItem = (item) => {
     setEditedItem(item);

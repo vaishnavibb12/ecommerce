@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { ImCross } from "react-icons/im";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Model({ closModel }) {
   const [formData, setFormData] = useState({
@@ -71,6 +73,7 @@ function Model({ closModel }) {
           <button type="submit" class="btn btn-primary">
             Submit
           </button>
+          <ToastContainer />
         </form>
       </div>
     </div>

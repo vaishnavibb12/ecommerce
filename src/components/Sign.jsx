@@ -31,7 +31,7 @@ function Sign() {
       alert("Please Enter New Password");
     } else if (formData.confirmpassword === "") {
       alert("Please Enter Confirm Password");
-    } else if (!formData.password) {
+    } else if (formData.password === "") {
       errors.password = "Password is required";
     } else if (formData.password.length < 8) {
       errors.password = "Password must be at least 8 characters long";
@@ -56,7 +56,7 @@ function Sign() {
         <div className="row">
           <div className="col-md-3 sidebar">
             <h5>Manage My Account</h5>
-            <a href="#" className="active">
+            <a href="/story" className="active">
               My Profile
             </a>
             <a href="#">Address Book</a>

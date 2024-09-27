@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../css/Sign.css";
+import Myprofile from "./Myprofile.jsx";
 
 function Sign() {
   const [formData, setFormData] = useState({
@@ -50,15 +51,24 @@ function Sign() {
 
   console.log(formData);
 
+  const [openMyprofile, setOpenMyprofile] = useState(false);
+
   return (
     <div className="section">
       <div className="container">
         <div className="row">
           <div className="col-md-3 sidebar">
             <h5>Manage My Account</h5>
-            <a href="/story" className="active">
+            <button
+              href=""
+              className="btn btn-primary"
+              onClick={() => {
+                setOpenMyprofile(true);
+              }}
+            >
               My Profile
-            </a>
+            </button>
+            {openMyprofile && <Myprofile closMyprofile={setOpenMyprofile} />}
             <a href="#">Address Book</a>
             <a href="#">My Payment Options</a>
             <h5>My Orders</h5>

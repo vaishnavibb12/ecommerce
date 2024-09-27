@@ -13,6 +13,31 @@ function Story() {
     { id: 3, label: "Jacket", image: flash },
     { id: 4, label: "Speaker", image: flash },
   ];
+  const [items, setItems] = useState([
+    { id: 1, name: "Item 1" },
+    { id: 2, name: "Item 2" },
+    { id: 3, name: "Item 3" },
+  ]);
+  const [editItemId, setEditItemId] = useState(null);
+  const [newName, setNewName] = useState("");
+  const handleDelete = (id) => {
+    setItems(items.filter((item) => item.id !== id));
+  };
+  const handleEdit = (id) => {
+    const itemToEdit = items.find((item) => item.id === id);
+    setEditItemId(id);
+    setNewName(itemToEdit.name); // Pre-fill input with current name
+  };
+
+  const handleSave = () => {
+    setItems(
+      items.map((item) =>
+        item.id === editItemId ? { ...item, name: newName } : item
+      )
+    );
+    setEditItemId(null);
+    setNewName(""); // Clear the input field
+  };
 
   const handleCheckboxChange = (id) => {
     if (selectedCheckboxes.includes(id)) {

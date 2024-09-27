@@ -4,6 +4,7 @@ import flash from "../assets/flash1.png";
 import data from "../Data";
 import { ImCross } from "react-icons/im";
 import { MdEdit } from "react-icons/md";
+
 function Dataentry() {
   const [quantity, setQuantity] = useState(2);
 
@@ -44,7 +45,7 @@ function Dataentry() {
 
   const [editedItem, setEditedItem] = useState({
     id: null,
-    content: "",
+    price: "",
     total: "",
   });
   const deleteItem = (id) => {
@@ -63,7 +64,23 @@ function Dataentry() {
         item.id === id ? { ...item, ...editedItem } : item
       )
     );
-    setEditedItem({ id: null, price: "", quantity: "" }); // Clear the edited item state
+    setEditedItem({ id: null, price: "", quantity: "" });
+  };
+
+  // disable
+
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [showView, setShowView] = useState(false);
+  const handleButtonClick = () => {
+    // Disable the button
+    setIsDisabled(true);
+
+    // Show the view
+    setShowView(true);
+    setTimeout(() => {
+      setIsDisabled(false); // Re-enable the button if needed
+      setShowView(false); // Hide the view again
+    }, 3000); // Change 3000 to your desired timeout duration in milliseconds
   };
 
   return (
@@ -117,8 +134,13 @@ function Dataentry() {
                         <ImCross />
                       </button>
 
-                      <button onClick={() => editItem(item)}>
-                        {" "}
+                      <button
+                        onClick={() => {
+                          editItem(item);
+                          handleButtonClick();
+                        }}
+                        disabled={isDisabled}
+                      >
                         <MdEdit />
                       </button>
                     </div>
@@ -136,12 +158,13 @@ function Dataentry() {
                   onChange={handleInputChange}
                   placeholder="Item Price"
                 />
+
                 <input
-                  type="number"
+                  type="text"
                   name="value"
-                  value={editedItem.quantity}
+                  value={editedItem.total}
                   onChange={handleInputChange}
-                  placeholder="Item Quantity"
+                  placeholder="Item Total"
                 />
                 <button onClick={() => updateItem(editedItem.id)}>
                   Update
@@ -152,9 +175,11 @@ function Dataentry() {
               <button type="button" class="btn btn-light">
                 Return To Shop
               </button>
-              <button type="button" class="btn btn-light">
-                Update Cart
-              </button>
+              {showView && (
+                <button type="button" class="btn btn-light">
+                  Update Cart
+                </button>
+              )}
             </div>
           </div>
 
@@ -165,9 +190,12 @@ function Dataentry() {
             <div className="col-lg-1 col-md-12 col-sm-12"></div>
             <div className="col-lg-6 col-md 12 col-sm-12">
               <div className="butt1">
-                <button type="button" class="btn btn-light">
-                  Coupon Code
-                </button>
+                <a href="/coupen">
+                  {" "}
+                  <button type="button" class="btn btn-light">
+                    Coupon Code
+                  </button>
+                </a>
                 <button type="button" class="btn btn-danger">
                   Apply Coupon
                 </button>

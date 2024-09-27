@@ -11,6 +11,7 @@ import Data from "./pages/Data.jsx";
 import Signup from "./pages/Signup.jsx";
 import Product from "./pages/Product.jsx";
 import OurStory from "./pages/OurStory.jsx";
+import Coupen from "./pages/Coupen.jsx";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/product" element={<Product />} />
           <Route path="/story" element={<OurStory />} />
+          <Route path="/coupen" element={<Coupen />} />
         </Routes>
 
         <Footer />

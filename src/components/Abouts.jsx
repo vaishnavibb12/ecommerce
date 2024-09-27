@@ -3,11 +3,15 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../css/Contact.css";
+
 import { FaGoogle } from "react-icons/fa";
 
 import numberCodeDb from "../Country.js";
 
 import Model from "./Model.jsx";
+import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 function Abouts() {
   const [formData, setFormData] = useState({
@@ -37,7 +41,7 @@ function Abouts() {
   // const notify = () => {
   //   toast.success("Success Notification!");
   // };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (formData.name === "") {
@@ -58,10 +62,18 @@ function Abouts() {
       alert("Password must contain at least one number");
     } else if (!/[!@#$%^&*]/.test(formData.password)) {
       alert("Password must contain at least one special character");
+    } else if (!captchaValue) {
+      alert("Please complete the CAPTCHA");
+      return;
+    } else if (!executeRecaptcha) {
+      return;
     } else {
       toast.success("Success Notification");
     }
+
+    const token = await executeRecaptcha("homepage");
   };
+
   console.log(formData);
 
   const [openModal, setOpenModel] = useState(false);
@@ -82,6 +94,7 @@ function Abouts() {
   const deleteItem = (id) => {
     setItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
+  const delteItem = () => {};
 
   // Function to handle input changes for editing
   const handleInputChange = (e) => {
@@ -103,6 +116,8 @@ function Abouts() {
     );
     setEditedItem({ id: null, name: "", value: "" }); // Clear the edited item state
   };
+  const [captchaValue, setCaptchaValue] = useState(null);
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   return (
     <>
@@ -171,6 +186,16 @@ function Abouts() {
                     value={formData.password}
                     onChange={handleChange}
                   />
+                </div>
+                <div className="form-group">
+                  <label>Captcha</label>
+                  <ReCAPTCHA
+                    sitekey="YOUR_SITE_KEY"
+                    onChange={setCaptchaValue}
+                  />
+                  {/* <button type="submit" disabled={!captchaValue}>
+                    Submit
+                  </button> */}
                 </div>
 
                 <button type="submit" className="btn btn-light">
